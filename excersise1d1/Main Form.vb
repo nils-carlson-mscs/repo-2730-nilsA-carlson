@@ -1,6 +1,6 @@
 ﻿'Name:          Bakery Project
 'Purpose:       Calculates the total number of items sold and sales
-'Programmer:    Nils Carlson on 09/01/16
+'Programmer:    Nils Carlson on 09/01/2016
 
 Public Class frmMain
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
