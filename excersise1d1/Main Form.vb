@@ -8,7 +8,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        'preapare screen for the next sale
+        'prepare screen for the next sale
         txtDonuts.Text = String.Empty
         txtMuffins.Text = String.Empty
         lblTotalItems.Text = String.Empty
@@ -22,5 +22,9 @@ Public Class frmMain
         lblTotalItems.Text = Val(txtDonuts.Text) + Val(txtMuffins.Text)
         lblTotalSales.Text = Val(lblTotalItems.Text) * 0.5
         lblTotalSales.Text = Format(lblTotalSales.Text, "currency")
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
