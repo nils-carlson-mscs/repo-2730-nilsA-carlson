@@ -75,7 +75,7 @@ Partial Class frmMain
         '
         'txtStraw
         '
-        Me.txtStraw.Location = New System.Drawing.Point(184, 114)
+        Me.txtStraw.Location = New System.Drawing.Point(184, 112)
         Me.txtStraw.Name = "txtStraw"
         Me.txtStraw.Size = New System.Drawing.Size(100, 20)
         Me.txtStraw.TabIndex = 2
@@ -109,7 +109,7 @@ Partial Class frmMain
         Me.txtProjIncrease.Name = "txtProjIncrease"
         Me.txtProjIncrease.Size = New System.Drawing.Size(69, 20)
         Me.txtProjIncrease.TabIndex = 0
-        Me.txtProjIncrease.Text = "0.05"
+        Me.txtProjIncrease.Text = "4"
         '
         'Label1
         '
