@@ -21,6 +21,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ncarlson2a1", "ncarlson2a1\
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ncarlson2b1", "ncarlson2b1\ncarlson2b1.vbproj", "{E2A236E7-7B03-4169-9025-5022DF2EEDCB}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ncarlson2c1", "ncarlson2c1\ncarlson2c1.vbproj", "{3D6788C4-D4D3-4A63-97CA-9D389AE6585E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{E2A236E7-7B03-4169-9025-5022DF2EEDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2A236E7-7B03-4169-9025-5022DF2EEDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2A236E7-7B03-4169-9025-5022DF2EEDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D6788C4-D4D3-4A63-97CA-9D389AE6585E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6788C4-D4D3-4A63-97CA-9D389AE6585E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6788C4-D4D3-4A63-97CA-9D389AE6585E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6788C4-D4D3-4A63-97CA-9D389AE6585E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
