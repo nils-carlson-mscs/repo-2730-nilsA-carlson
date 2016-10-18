@@ -25,7 +25,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDollar = New System.Windows.Forms.TextBox()
         Me.btnConvertEq = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnConvertNot = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -88,14 +88,14 @@ Partial Class Form1
         Me.btnConvertEq.Text = "Convert ="
         Me.btnConvertEq.UseVisualStyleBackColor = True
         '
-        'btnExit
+        'btnConvertNot
         '
-        Me.btnExit.Location = New System.Drawing.Point(125, 63)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 3
-        Me.btnExit.Text = "Convert <>"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnConvertNot.Location = New System.Drawing.Point(125, 63)
+        Me.btnConvertNot.Name = "btnConvertNot"
+        Me.btnConvertNot.Size = New System.Drawing.Size(75, 23)
+        Me.btnConvertNot.TabIndex = 3
+        Me.btnConvertNot.Text = "Convert <>"
+        Me.btnConvertNot.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -157,7 +157,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.txtDollar)
         Me.GroupBox1.Controls.Add(Me.btnConvertEq)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.btnExit)
+        Me.GroupBox1.Controls.Add(Me.btnConvertNot)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -416,7 +416,7 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents txtDollar As TextBox
     Friend WithEvents btnConvertEq As Button
-    Friend WithEvents btnExit As Button
+    Friend WithEvents btnConvertNot As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

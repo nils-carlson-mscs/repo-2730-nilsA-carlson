@@ -96,14 +96,53 @@ Public Class Form1
         Double.TryParse(txtFirst.Text, dblFirst)
         Double.TryParse(txtSecond.Text, dblSecond)
 
-        If dblSecond = 0 Then
-            MessageBox.Show("Cannot divide by Zero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            dblQuotient = dblFirst / dblSecond
 
+        If dblSecond = 0 AndAlso dblFirst = 0 Then
+            MessageBox.Show("Cannot divide by zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
+        If dblFirst > dblSecond Then
+            Dim dblTemp As Double
+            dblTemp = dblFirst
+            dblFirst = dblSecond
+            dblSecond = dblTemp
+        End If
+
+
+        dblQuotient = dblSecond / dblFirst
+
+
         lblQuotient.Text = dblQuotient.ToString
         txtFirst.Text = String.Empty
         txtSecond.Text = String.Empty
+    End Sub
+
+    Private Sub btnConvertNot_Click(sender As Object, e As EventArgs) Handles btnConvertNot.Click
+
+        Const dblEURO_RATE As Double = 0.9
+        Const dblPOUND_RATE As Double = 0.791
+        Const dblRAND_RATE As Double = 13.89
+        Dim dblDollar As Double
+        Dim dblEuro As Double
+        Dim dblPound As Double
+        Dim dblRand As Double
+
+        lblEuro.Text = String.Empty
+        lblPound.Text = String.Empty
+        lblRand.Text = String.Empty
+
+
+        If txtDollar.Text <> String.Empty Then
+            MessageBox.Show("Input does not work.", "Currency Converter", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            Double.TryParse(txtDollar.Text, dblDollar)
+        End If
+        dblEuro = dblDollar * 0.9
+        dblPound = dblDollar * 0.79
+        dblRand = dblDollar * 13.89
+
+        lblRand.Text = dblRand.ToString("c2")
+        lblPound.Text = dblPound.ToString("c2")
+        lblEuro.Text = dblEuro.ToString("c2")
     End Sub
 End Class
