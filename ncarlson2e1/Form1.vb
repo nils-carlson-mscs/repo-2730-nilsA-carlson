@@ -11,15 +11,20 @@
 
 
         If strYN.ToUpper = "Y" AndAlso dblOrder < 100 Then
-            dblCharge = 9
-
-
-
+            dblCharge = 0
 
         End If
 
-        lblCharge.Text = dblCharge.ToString("c")
+        If strYN.ToUpper <> "Y" AndAlso dblOrder < 100 Then
+            dblCharge = 9
+        End If
 
+        If strYN.ToUpper <> "Y" AndAlso dblOrder >= 100 Then
+            dblCharge = 9
+        End If
+
+        lblCharge.Text = dblCharge.ToString("c")
+        'lblCharge.Text = String.Empty
 
     End Sub
 End Class
