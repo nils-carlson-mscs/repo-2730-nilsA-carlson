@@ -87,6 +87,7 @@ Partial Class Form1
         Me.lblCharge.Name = "lblCharge"
         Me.lblCharge.Size = New System.Drawing.Size(100, 23)
         Me.lblCharge.TabIndex = 5
+        Me.lblCharge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
