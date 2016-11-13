@@ -28,11 +28,27 @@ Public Class Form1
     End Sub
 
     Private Sub DisplayColor(ByVal itemNum As String)
-        lstColors.Items.Add(itemNum)
-        If itemNum.Length = 7 And itemNum.ToUpper.Contains("B") Then
-            lstColors =
+        If itemNum.Length < 4 Then
+            lstColors.Items.Add("Invalid:" & itemNum)
+        End If
+        If itemNum.Length = 7 Then
+            Select Case itemNum.Substring(3, 1).ToUpper
+                Case "B"
+                    lstColors.Items.Add(itemNum & ":Blue")
+                Case "G"
+                    lstColors.Items.Add(itemNum & ":Green")
+                Case "R"
+                    lstColors.Items.Add(itemNum & ":Red")
+                Case "W"
+                    lstColors.Items.Add(itemNum & ":White")
+                Case <> "[A-Z]"
+                    lstColors.Items.Add("Invalid:" & itemNum)
+            End Select
+        Else
 
         End If
+
+
     End Sub
 
     Private Sub txtName_Enter(sender As Object, e As EventArgs) Handles txtName.Enter
@@ -53,7 +69,27 @@ Public Class Form1
     End Sub
 
     Private Sub DisplayDelivery(ByVal partNum As String)
-        lstDelivery.Items.Add("Mail - Standard")
+        'lstDelivery.Items.Add("Mail - Standard")
+        Dim strDelivery As String = partNum.Substring(2).ToUpper
+        If partNum.Length >= 3 AndAlso partNum.Length <= 4 AndAlso partNum.Substring(0, 2) Like "##" Then
+            Select Case strDelivery
+                Case "MS"
+                    lstDelivery.Items.Add("Mail-Standard")
+                Case "MP"
+                    lstDelivery.Items.Add("Mail-Priority")
+                Case "FS"
+                    lstDelivery.Items.Add("Fedex-Standard")
+                Case "FO"
+                    lstDelivery.Items.Add("Fedex-Overnight")
+                Case "U"
+                    lstDelivery.Items.Add("UPS")
+                Case Else
+                    lstDelivery.Items.Add("Invalid: " & partNum)
+
+
+            End Select
+
+        End If
     End Sub
 
     Private Sub PartNum_TextChanged(sender As Object, e As EventArgs) _
@@ -63,14 +99,29 @@ Public Class Form1
 
     'btnProper_Click pseudocode:
     '1) Convert txtName to lower case, store in strName
+
     '2) Use strName.Substring() to get first character of strName, convert to upper case, store in strFirstChar
+
     '3) Remove first character of strName
     '4) Insert strFirstChar at beginning of strName
     '5) Use strName.IndexOf() to find the space character. Add 1 and store in index
     '6) Repeat steps 2 - 4 to remove/insert first letter of last name
 
     Private Sub btnProper_Click(sender As Object, e As EventArgs) Handles btnProper.Click
+        Dim strName As String = txtName.Text.ToLower()
+        Dim strFirstChar As String = strName.Substring(0, 1).ToUpper()
+        Dim index As Integer = strName.IndexOf(" "c) + 1
+        Dim strSecondChar As String = strName.Substring(index, 1).ToUpper()
+        strName = strName.Remove(0, 1)
+        strName = strName.Insert(0, strFirstChar)
+        strName = strName.Remove(index, 1)
+        strName = strName.Insert(index, strSecondChar)
+
+        lblName.Text = strName
 
     End Sub
+
+
+
 
 End Class
