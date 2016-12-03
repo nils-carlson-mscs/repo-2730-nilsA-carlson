@@ -10,6 +10,9 @@ Public Class form1
     Private short1, short2, short3 As Short
     Private integer1, integer2, integer3 As Integer
     Private long1, long2, long3 As Long
+
+
+
     Private single1, single2, single3 As Single
     Private double1, double2, double3 As Double
     Private decimal1, decimal2, decimal3 As Decimal
@@ -68,7 +71,7 @@ Public Class form1
         'str3 = str1 - str2
         'lblString3.Text = str3
         byte3 = byte1 - byte2
-        lblByte3.Text = byte3.ToString()s
+        lblByte3.Text = byte3.ToString()
         short3 = short1 - short2
         lblShort3.Text = short3.ToString()
         integer3 = integer1 - integer2
