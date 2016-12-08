@@ -90,7 +90,7 @@
 
 
 
-
+        txtEarthWeight.Focus()
         lblWeight.Text = dblWeightonPlanet.ToString
 
     End Sub
@@ -176,12 +176,12 @@
 
     'select all text
 
-    Private Sub txtEarthWeight_Enter(sender As Object, e As EventArgs) Handles txtEarthWeight.Enter
-        If txtEarthWeight.SelectionLength = 0 Then
+    'Private Sub txtEarthWeight_Enter(sender As Object, e As EventArgs) Handles txtEarthWeight.Enter
+    '    If txtEarthWeight.SelectionLength = 0 Then
 
-            txtEarthWeight.SelectAll()
-        End If
-    End Sub
+    '        txtEarthWeight.SelectAll()
+    '    End If
+    'End Sub
 
     'Allow only # and backspace
 
